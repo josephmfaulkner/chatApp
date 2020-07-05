@@ -5,7 +5,6 @@ exports.setupSocketRoutes = function(io)
 
         socket.on('message', (data) => {
             console.log(data);
-            socket.emit('new-message', data);
             io.emit('new-message', data);
         });
     });

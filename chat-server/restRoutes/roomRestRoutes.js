@@ -15,6 +15,7 @@ roomRouter.get('/', (req, res) => {
 
 // Get all Rooms
 roomRouter.post('/', (req, res) => {
+    console.log(req.body);
     const newRoomName = req.body.roomname;
     console.log(`newRoomName: ${newRoomName}`);
     roomModel.addRoom(newRoomName).then(result => {
